@@ -1,0 +1,302 @@
+/* ==========================================================================
+   SINTECRA | ENERGÍA & OBRAS — Industrial B2B Design System & Microanimations
+   Transitions calibrated between 250ms and 400ms for engineering precision
+   ========================================================================== */
+
+:root {
+  --color-carbon: #0A0A0A;
+  --color-anthracite: #141414;
+  --color-footer: #050505;
+  --color-stone: #F4F4F5;
+  --color-amber: #F59E0B;
+  --color-amber-hover: #D97706;
+  --color-green: #16A34A;
+  --ease-industrial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Blueprint & Engineering Grids */
+.bg-engineering-grid {
+  background-color: #0A0A0A;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to right, rgba(245, 158, 11, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px, 160px 160px, 160px 160px;
+}
+
+.bg-light-grid {
+  background-color: #F4F4F5;
+  background-image:
+    linear-gradient(to right, rgba(10, 10, 10, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Official Logo Typographic Fallback Replica (sintecra_v2_white.jpg) */
+.sintecra-logo-fallback {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  user-select: none;
+}
+.sintecra-logo-fallback__title {
+  font-family: 'Montserrat', 'Barlow', sans-serif;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.sintecra-logo-fallback__divider {
+  height: 1px;
+  width: 100%;
+  background-color: #FFFFFF;
+  margin: 4px 0 5px 0;
+  opacity: 0.9;
+}
+.sintecra-logo-fallback__subtitle {
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 0.28em;
+}
+
+/* ==========================================================================
+   3. ENLACES INTERACTIVOS DE SERVICIOS (Hover & Mobile Touch Optimized)
+   - Aumento de tamaño suave (scale)
+   - Transición de color a ámbar corporativo (#F59E0B)
+   - Subrayado animado
+   - Glow sutil
+   - Cursor pointer
+   - En móvil: área táctil ampliada y touch-action manipulation
+   ========================================================================== */
+.service-interactive-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(245, 158, 11, 0.15);
+  transition:
+    transform 300ms var(--ease-industrial),
+    color 280ms var(--ease-industrial),
+    text-shadow 320ms var(--ease-industrial),
+    filter 320ms var(--ease-industrial);
+  transform-origin: left center;
+}
+
+.service-interactive-link--center {
+  transform-origin: center center;
+}
+
+/* Subrayado animado de izquierda a derecha */
+.service-interactive-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 70%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-industrial), box-shadow 320ms var(--ease-industrial);
+}
+
+.service-interactive-link:hover,
+.service-interactive-link:focus-visible {
+  color: #F59E0B !important;
+  transform: scale(1.045);
+  text-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
+}
+
+.service-interactive-link:hover::after,
+.service-interactive-link:focus-visible::after,
+.group:hover .service-interactive-link::after {
+  transform: scaleX(1);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.55);
+}
+
+.group:hover .service-interactive-link {
+  color: #F59E0B !important;
+  transform: scale(1.035);
+  text-shadow: 0 0 18px rgba(245, 158, 11, 0.42);
+}
+
+/* Versión sobre fondo claro (#F4F4F5 / #FFFFFF) */
+.service-interactive-link--light:hover,
+.service-interactive-link--light:focus-visible,
+.group:hover .service-interactive-link--light {
+  color: #D97706 !important;
+  text-shadow: 0 0 14px rgba(245, 158, 11, 0.28);
+}
+
+/* Optimización táctil móvil: área táctil ampliada */
+@media (max-width: 768px) {
+  .service-interactive-link {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    min-height: 44px;
+  }
+  .service-interactive-link:active {
+    color: #F59E0B !important;
+    transform: scale(1.03);
+    text-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+  }
+  .service-interactive-link:active::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Píldoras interactivas de servicios en el Hero */
+.hero-service-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.7rem 1.15rem;
+  min-height: 48px;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform 300ms var(--ease-industrial),
+    border-color 300ms var(--ease-industrial),
+    background-color 300ms var(--ease-industrial),
+    box-shadow 320ms var(--ease-industrial),
+    color 280ms var(--ease-industrial);
+}
+
+.hero-service-pill:hover,
+.hero-service-pill:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+  border-color: #F59E0B;
+  background: rgba(24, 24, 27, 0.96);
+  color: #F59E0B;
+  box-shadow: 0 10px 28px -6px rgba(245, 158, 11, 0.28), 0 0 0 1px rgba(245, 158, 11, 0.25);
+}
+
+/* ==========================================================================
+   4 & 6. TARJETAS INTERACTIVAS, ELEVACIÓN, BORDES ANIMADOS Y PROFUNDIDAD
+   ========================================================================== */
+.card-industrial-interactive {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 340ms var(--ease-industrial),
+    box-shadow 340ms var(--ease-industrial),
+    border-color 300ms var(--ease-industrial);
+  will-change: transform;
+}
+
+.card-industrial-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #F59E0B, #FBBF24, #D97706);
+  transform: scaleX(0.28);
+  transform-origin: left center;
+  transition: transform 360ms var(--ease-industrial), box-shadow 360ms var(--ease-industrial);
+  z-index: 20;
+}
+
+.card-industrial-interactive:hover,
+.card-industrial-interactive:focus-within {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.65);
+  box-shadow:
+    0 20px 38px -12px rgba(0, 0, 0, 0.65),
+    0 0 24px -4px rgba(245, 158, 11, 0.2);
+}
+
+.card-industrial-interactive--light:hover,
+.card-industrial-interactive--light:focus-within {
+  box-shadow:
+    0 20px 36px -12px rgba(10, 10, 10, 0.14),
+    0 0 0 1px rgba(245, 158, 11, 0.45);
+}
+
+.card-industrial-interactive:hover::before,
+.card-industrial-interactive:focus-within::before {
+  transform: scaleX(1);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.75);
+}
+
+/* Zoom suave de imagen en los 4 grandes bloques de navegación rápida */
+.quick-nav-card__img {
+  transition: transform 400ms var(--ease-industrial), filter 400ms var(--ease-industrial);
+  will-change: transform;
+}
+
+.card-industrial-interactive:hover .quick-nav-card__img {
+  transform: scale(1.06);
+  filter: contrast(1.06) brightness(1.05);
+}
+
+/* ==========================================================================
+   7. ANIMACIONES MODERNAS: FADE IN ON SCROLL & PARALLAX SUAVE
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 360ms var(--ease-industrial),
+    transform 360ms var(--ease-industrial);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respeta accesibilidad si el usuario prefiere reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .quick-nav-card__img,
+  .card-industrial-interactive,
+  .service-interactive-link {
+    transition: none !important;
+  }
+}
+
+/* Transición suave entre secciones (Divisores técnicos) */
+.section-transition-dark-to-light {
+  height: 4px;
+  background: linear-gradient(90deg, #0A0A0A 0%, #F59E0B 50%, #0A0A0A 100%);
+}
+
+/* Pulso sutil para botón flotante de WhatsApp */
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.55), 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(22, 163, 74, 0), 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+.whatsapp-pulse {
+  animation: subtlePulse 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Offset anchor scroll for sticky header */
+section[id], footer[id] {
+  scroll-margin-top: 5rem;
+}

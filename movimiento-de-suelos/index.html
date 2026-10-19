@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Movimiento de Suelos, Nivelación y Zanjeo Técnico | SINTECRA</title>
+  <meta name="description" content="División Movimiento de Suelos de SINTECRA: nivelación láser, desmonte, terraplenes con tosca, excavaciones profundas, zanjeo técnico y drenajes pluviales para industria, agro y loteos." />
+  <link rel="canonical" href="https://sintecra.com.ar/movimiento-de-suelos" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="SINTECRA | ENERGÍA & OBRAS" />
+  <meta property="og:url" content="https://sintecra.com.ar/movimiento-de-suelos" />
+  <meta property="og:title" content="Movimiento de Suelos, Nivelación y Zanjeo Técnico | SINTECRA" />
+  <meta property="og:description" content="Maquinaria vial con operador calificado, seguros de obra y ART en regla para preparación de terrenos, terraplenes, excavaciones y zanjeo técnico." />
+  <meta property="og:image" content="https://sintecra.com.ar/sintecra_v2_white.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            carbon: '#0A0A0A',
+            anthracite: '#141414',
+            footerdark: '#050505',
+            stonebg: '#F4F4F5',
+            techborder: '#E4E4E7',
+            darkborder: '#262626',
+            modulecard: '#1F1F22',
+            moduleborder: '#2E2E32',
+            amber: { vial: '#F59E0B', hover: '#D97706' },
+            operational: { green: '#16A34A', hover: '#15803D' }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'Barlow', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/assets/sintecra.css" />
+</head>
+<body class="bg-carbon text-white font-sans antialiased selection:bg-amber-vial selection:text-carbon">
+
+  <!-- HEADER FIJO -->
+  <header class="sticky top-0 z-50 w-full bg-carbon/90 backdrop-blur-md border-b border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="/" class="flex items-center focus:outline-none group shrink-0" aria-label="SINTECRA | ENERGÍA & OBRAS - Inicio">
+        <img
+          src="/sintecra_v2_white.jpg"
+          alt="SINTECRA | ENERGÍA & OBRAS"
+          class="h-12 w-auto object-contain"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"
+        />
+        <div class="sintecra-logo-fallback" style="display: none;">
+          <span class="sintecra-logo-fallback__title text-xl sm:text-2xl">SINTECRA</span>
+          <span class="sintecra-logo-fallback__divider"></span>
+          <span class="sintecra-logo-fallback__subtitle text-[9px] sm:text-[10px]">ENERGÍA &amp; OBRAS</span>
+        </div>
+      </a>
+
+      <nav class="hidden xl:flex items-center space-x-6" aria-label="Navegación principal">
+        <a href="/movimiento-de-suelos" class="service-interactive-link text-xs font-heading font-bold text-amber-vial tracking-wider uppercase" aria-current="page">
+          Movimiento de Suelos
+        </a>
+        <a href="/obra-civil" class="service-interactive-link text-xs font-heading font-bold text-zinc-200 tracking-wider uppercase">
+          Obra Civil
+        </a>
+        <a href="/energias-renovables" class="service-interactive-link text-xs font-heading font-bold text-zinc-200 tracking-wider uppercase">
+          Energías Renovables
+        </a>
+        <a href="/automatizacion" class="service-interactive-link text-xs font-heading font-bold text-zinc-200 tracking-wider uppercase">
+          Automatización y Control
+        </a>
+        <span class="h-4 w-px bg-zinc-800" aria-hidden="true"></span>
+        <a href="/" class="text-xs font-medium text-zinc-400 hover:text-amber-vial transition-colors tracking-wider uppercase">
+          Inicio
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href="https://wa.me/5491127971312?text=Hola%20Sintecra,%20quiero%20cotizar%20un%20trabajo%20de%20Movimiento%20de%20Suelos."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-amber-vial hover:bg-amber-hover text-carbon font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider px-4 sm:px-5 py-2.5 sm:py-3 rounded-sm transition-all duration-300"
+        >
+          <span>Cotizar Suelos</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="xl:hidden inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-sm text-zinc-300 hover:text-white border border-[#262626]" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="hidden xl:hidden bg-carbon border-b border-[#262626] px-4 pt-3 pb-6 space-y-1.5">
+      <a href="/" class="mobile-nav-link block py-2.5 px-3 text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-amber-vial">← Volver al Inicio</a>
+      <a href="/movimiento-de-suelos" class="mobile-nav-link flex items-center justify-between py-3 px-3 text-sm font-heading font-bold uppercase tracking-wider text-amber-vial bg-zinc-900 rounded-sm"><span>01. Movimiento de Suelos</span><span>•</span></a>
+      <a href="/obra-civil" class="mobile-nav-link flex items-center justify-between py-3 px-3 text-sm font-heading font-bold uppercase tracking-wider text-white hover:bg-zinc-900 rounded-sm"><span>02. Obra Civil</span><span class="text-amber-vial">-&gt;</span></a>
+      <a href="/energias-renovables" class="mobile-nav-link flex items-center justify-between py-3 px-3 text-sm font-heading font-bold uppercase tracking-wider text-white hover:bg-zinc-900 rounded-sm"><span>03. Energías Renovables</span><span class="text-amber-vial">-&gt;</span></a>
+      <a href="/automatizacion" class="mobile-nav-link flex items-center justify-between py-3 px-3 text-sm font-heading font-bold uppercase tracking-wider text-white hover:bg-zinc-900 rounded-sm"><span>04. Automatización y Control</span><span class="text-amber-vial">-&gt;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO DIVISIÓN 01 -->
+    <section class="relative bg-carbon border-b border-[#262626] overflow-hidden">
+      <div
+        id="hero-parallax-bg"
+        class="absolute inset-0 pointer-events-none opacity-30 bg-cover bg-center scale-105"
+        style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=80');"
+        aria-hidden="true"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-carbon/85 via-carbon/80 to-carbon pointer-events-none"></div>
+      <div class="absolute inset-0 bg-engineering-grid opacity-65 pointer-events-none"></div>
+      <div class="h-1 w-full bg-gradient-to-r from-amber-vial via-amber-vial/50 to-transparent relative z-10"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+        <!-- Breadcrumb -->
+        <nav class="reveal-on-scroll flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-zinc-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-amber-vial transition-colors">Inicio</a>
+          <span>/</span>
+          <span class="text-amber-vial font-bold">División 01 • Movimiento de Suelos</span>
+        </nav>
+
+        <div class="max-w-4xl">
+          <h1 class="reveal-on-scroll font-heading font-black text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-[1.06] mb-6" style="--reveal-delay: 60ms;">
+            Movimiento de Suelos y <span class="text-amber-vial">Preparación de Terrenos.</span>
+          </h1>
+          <p class="reveal-on-scroll text-base sm:text-xl text-zinc-300 leading-relaxed mb-9" style="--reveal-delay: 120ms;">
+            Maquinaria vial con operador calificado, cumplimiento de plazos y certificación por avance de obra para particulares, arquitectos, desarrolladores, parques industriales y sector agropecuario.
+          </p>
+
+          <div class="reveal-on-scroll flex flex-col sm:flex-row items-stretch sm:items-center gap-4" style="--reveal-delay: 180ms;">
+            <a
+              href="https://wa.me/5491127971312?text=Hola%20Sintecra,%20quiero%20solicitar%20presupuesto%20para%20Movimiento%20de%20Suelos."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 bg-amber-vial hover:bg-amber-hover text-carbon font-heading font-extrabold text-sm sm:text-base uppercase tracking-wider px-7 py-4 rounded-sm transition-all duration-300 hover:-translate-y-0.5 text-center"
+            >
+              <span>Solicitar Presupuesto de Suelo</span>
+            </a>
+            <a
+              href="#servicios-suelo"
+              class="inline-flex items-center justify-center gap-2 border border-white/80 hover:border-amber-vial hover:text-amber-vial px-7 py-4 rounded-sm font-heading font-bold text-sm sm:text-base uppercase tracking-wider transition-colors duration-300 text-center"
+            >
+              <span>Ver Alcance Técnico</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALCANCE TÉCNICO DETALLADO -->
+    <section id="servicios-suelo" class="bg-stonebg bg-light-grid text-carbon py-16 sm:py-24 border-b border-techborder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-on-scroll max-w-3xl mb-12 sm:mb-16">
+          <p class="text-xs sm:text-sm font-heading font-extrabold tracking-widest uppercase text-amber-hover mb-3 flex items-center gap-2">
+            <span class="w-6 h-0.5 bg-amber-vial inline-block"></span>
+            SOLUCIONES EN TERRENO
+          </p>
+          <h2 class="font-heading font-black text-2xl sm:text-4xl uppercase tracking-tight text-carbon leading-tight">
+            Especialidades de nuestra Unidad de Suelos
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- 1 -->
+          <article class="reveal-on-scroll card-industrial-interactive card-industrial-interactive--light bg-white border border-techborder rounded-sm p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-sm bg-carbon text-amber-vial flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 17h12v4H2z"/><path d="M4 17V9h6l3 4v4"/><path d="M10 9l5-5 5 5-3 3"/><path d="M17 12l4 5h-4"/></svg>
+              </div>
+              <h3 class="font-heading font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-carbon mb-4">
+                Nivelación, Desmonte y Terraplenes
+              </h3>
+              <ul class="space-y-3.5 text-zinc-700 text-sm sm:text-base mb-8">
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Perfilado, destronque y limpieza integral de lotes y predios</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Aporte, relleno y compactación mecánica por capas con suelo seleccionado y tosca</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Preparación de bases niveladas para plateas, galpones y naves industriales.</span></li>
+              </ul>
+            </div>
+            <div class="pt-5 border-t border-techborder">
+              <a href="https://wa.me/5491127971312?text=Hola%20Sintecra,%20quiero%20cotizar%20Nivelaci%C3%B3n,%20Desmonte%20y%20Terraplenes." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between bg-carbon hover:bg-amber-vial text-white hover:text-carbon font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider px-5 py-3.5 rounded-sm transition-colors duration-300">
+                <span>Cotizar Nivelación -&gt;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="reveal-on-scroll card-industrial-interactive card-industrial-interactive--light bg-white border border-techborder rounded-sm p-6 sm:p-8 flex flex-col justify-between" style="--reveal-delay: 80ms;">
+            <div>
+              <div class="w-12 h-12 rounded-sm bg-carbon text-amber-vial flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 22v-5l5-5 5 5-5 5z"/><path d="M9.5 14.5L16 8"/><path d="m17 2 5 5-.5.5a3.53 3.53 0 0 1-5 0 3.53 3.53 0 0 1 0-5L17 2"/></svg>
+              </div>
+              <h3 class="font-heading font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-carbon mb-4">
+                Excavaciones y Zanjeo Técnico
+              </h3>
+              <ul class="space-y-3.5 text-zinc-700 text-sm sm:text-base mb-8">
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Apertura de zanjas de precisión para tendidos eléctricos subterráneos, fibra y cañerías</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Excavación para bases de fundación, zapatas, cisternas, tanques y biodigestores</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Tapado, compactación y señalización preventiva de trazas subterráneas.</span></li>
+              </ul>
+            </div>
+            <div class="pt-5 border-t border-techborder">
+              <a href="https://wa.me/5491127971312?text=Hola%20Sintecra,%20quiero%20cotizar%20Excavaciones%20y%20Zanjeo%20T%C3%A9cnico." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between bg-carbon hover:bg-amber-vial text-white hover:text-carbon font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider px-5 py-3.5 rounded-sm transition-colors duration-300">
+                <span>Cotizar Excavación -&gt;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="reveal-on-scroll card-industrial-interactive card-industrial-interactive--light bg-white border border-techborder rounded-sm p-6 sm:p-8 flex flex-col justify-between" style="--reveal-delay: 160ms;">
+            <div>
+              <div class="w-12 h-12 rounded-sm bg-carbon text-amber-vial flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M5 13h14"/><path d="M7 9h10"/></svg>
+              </div>
+              <h3 class="font-heading font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-carbon mb-4">
+                Drenajes, Cuneteo y Alquiler con Operador
+              </h3>
+              <ul class="space-y-3.5 text-zinc-700 text-sm sm:text-base mb-8">
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Pendientes de escurrimiento, zanjeo pluvial, cuneteo y reservorios de retención</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Alquiler de minicargadoras, retroexcavadoras y equipos viales con operador asegurado</span></li>
+                <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-amber-vial mt-2.5 shrink-0"></span><span>Pólizas de responsabilidad civil, ART y cláusulas de no repetición listas para ingreso a planta o barrio privado.</span></li>
+              </ul>
+            </div>
+            <div class="pt-5 border-t border-techborder">
+              <a href="https://wa.me/5491127971312?text=Hola%20Sintecra,%20quiero%20cotizar%20Drenajes%20o%20Alquiler%20de%20Maquinaria%20con%20Operador." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between bg-carbon hover:bg-amber-vial text-white hover:text-carbon font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider px-5 py-3.5 rounded-sm transition-colors duration-300">
+                <span>Cotizar Equipos / Drenajes -&gt;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVEGACIÓN A LAS DEMÁS DIVISIONES -->
+    <section class="bg-anthracite text-white py-16 border-b border-[#262626]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-xs font-heading font-bold uppercase tracking-widest text-amber-vial mb-3">CONTINUIDAD DE OBRA</p>
+        <h2 class="font-heading font-black text-2xl sm:text-3xl uppercase tracking-tight text-white mb-8">
+          Integrá el movimiento de suelo con nuestras demás unidades
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <a href="/obra-civil" class="card-industrial-interactive group bg-modulecard border border-moduleborder p-6 rounded-sm block">
+            <span class="text-xs font-heading font-bold text-amber-vial uppercase tracking-widest block mb-2">DIVISIÓN 02</span>
+            <span class="service-interactive-link font-heading font-extrabold text-lg uppercase text-white mb-2">Obra Civil</span>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2">Caminos, accesos pesados, playas de maniobras, hormigón y asfalto frío.</p>
+          </a>
+          <a href="/energias-renovables" class="card-industrial-interactive group bg-modulecard border border-moduleborder p-6 rounded-sm block">
+            <span class="text-xs font-heading font-bold text-amber-vial uppercase tracking-widest block mb-2">DIVISIÓN 03</span>
+            <span class="service-interactive-link font-heading font-extrabold text-lg uppercase text-white mb-2">Energías Renovables</span>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2">Energía solar off-grid, respaldo con litio/gel y sistemas de bombeo solar.</p>
+          </a>
+          <a href="/automatizacion" class="card-industrial-interactive group bg-modulecard border border-moduleborder p-6 rounded-sm block">
+            <span class="text-xs font-heading font-bold text-amber-vial uppercase tracking-widest block mb-2">DIVISIÓN 04</span>
+            <span class="service-interactive-link font-heading font-extrabold text-lg uppercase text-white mb-2">Automatización y Control</span>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2">Telemetría remota de tanques y bombas, tableros de comando y sensores.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-footerdark text-white border-t border-[#262626] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="font-heading font-black text-lg uppercase tracking-wider">SINTECRA | ENERGÍA &amp; OBRAS</p>
+        <p class="text-xs text-zinc-400 mt-1">WhatsApp Operaciones: <a href="https://wa.me/5491127971312" class="text-amber-vial hover:underline">11 2797-1312</a> • Ventas: <a href="tel:+5491156133765" class="text-zinc-200 hover:underline">11 5613-3765</a></p>
+      </div>
+      <a href="/" class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider border border-zinc-700 hover:border-amber-vial text-zinc-200 hover:text-amber-vial px-4 py-2.5 rounded-sm transition-colors">
+        <span>← Volver a la Página Principal</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="/assets/sintecra.js"></script>
+</body>
+</html>
